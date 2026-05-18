@@ -1,11 +1,8 @@
 FROM n8nio/n8n:latest
 
 USER root
-RUN mkdir -p /custom && chown node:node /custom
 
-USER node
-WORKDIR /custom
-RUN npm init -y && \
+RUN cd /usr/local/lib/node_modules/n8n && \
     npm install n8n-nodes-ultimate
 
-WORKDIR /usr/local/lib/node_modules/n8n
+USER node
