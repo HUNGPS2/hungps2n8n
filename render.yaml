@@ -10,24 +10,46 @@ services:
       - key: N8N_CUSTOM_EXTENSIONS
         value: /custom/node_modules
       - key: DB_TYPE
-        value: postgresdb
+        sync: false
       - key: DB_POSTGRESDB_DATABASE
-        fromDatabase:
-          name: n8n-db
-          property: database
+        sync: false
       - key: DB_POSTGRESDB_HOST
-        fromDatabase:
-          name: n8n-db
-          property: host
+        sync: false
       - key: DB_POSTGRESDB_PASSWORD
-        fromDatabase:
-          name: n8n-db
-          property: password
+        sync: false
       - key: DB_POSTGRESDB_USER
-        fromDatabase:
-          name: n8n-db
-          property: user
-
-databases:
-  - name: n8n-db
-    plan: free
+        sync: false
+      - key: DB_POSTGRESDB_PORT
+        sync: false
+      - key: DB_POSTGRESDB_SSL_ENABLED
+        sync: false
+      - key: DB_POSTGRESDB_CONNECTION_TIM
+        sync: false
+      - key: N8N_BLOCK_XML_EXTERNAL_FNTTT
+        sync: false
+         - key: N8N_COMMUNITY_PACKAGES_ENABLED
+sync: false
+ - key: N8N_DISABLE_TASK_BROKER
+sync: false
+ - key: N8N_EDITOR_BASE_URL
+sync: false
+ - key: N8N_ENCRYPTION_KEY
+sync: false
+ - key: N8N_HOST
+sync: false
+ - key: N8N_NATIVE_PYTHON_RUNNER
+sync: false
+ - key: N8N_PORT
+sync: false
+ - key: N8N_PROTOCOL
+sync: false
+ - key: N8N_RUNNERS_ENABLED
+sync: false
+ - key: N8N_RUNNERS_MODE
+sync: false
+ - key: NODE_FUNCTION_ALLOW_EXTERNAL
+sync: false
+ - key: NODE_TLS_REJECT_UNAUTHORIZED
+sync: false
+ - key: WEBHOOK_URL
+sync: false
